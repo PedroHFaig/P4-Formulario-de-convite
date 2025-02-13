@@ -1,0 +1,122 @@
+.checkbox-wrapper {
+    display:flex ;
+    align-items: center;
+    gap: .75rem;
+
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 64px;
+        height: 32px;
+
+        margin-block: .5rem;
+
+        border: 2px solid transparent;
+        outline: 1px solid var(--input-stroke);
+        border-radius: 34px;
+
+        & input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        & .slider {
+            position: absolute;
+            border-radius: 34px;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--input-base);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        & .slider:before {
+            position: absolute;
+            content: "";
+            height: 24px;
+            width: 24px;
+            top: 2px;
+            left: 2px;
+            bottom: 4px;
+            border-radius: 50%;
+            background-color: var(--input-stroke);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: var(--brand-light);
+        }
+          
+        input:checked + .slider:before {
+            -webkit-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            transform: translateX(30px);
+            background-color: var(--textcolor-heading);
+        }
+    }
+
+    & span {
+        font: var(--text-body-sm);
+    }
+
+    & .toggleon {
+        opacity: 0;
+    }
+    
+    &:has(:checked) {
+        & .toggleoff {
+            display: none;
+        }
+
+        & .toggleon {
+            opacity: 100%;
+        }
+    }
+}
+
+.terms {
+    border-top: 1px solid var(--input-stroke);
+
+    .input-wrapper {
+        display: grid;
+        gap: 1rem;
+
+        margin-block: 2.5rem 3rem;
+
+        .checkbox-wrapper {    
+            display: flex;
+            gap: .75rem;
+            align-items: flex-start;
+    
+            position: relative;
+            & [type="checkbox"] {
+                    all: unset;
+                    position: absolute;
+                    inset: 0;
+            }
+    
+            .checkbox-image {
+                    flex: 0 0 1.25rem;
+                    height: 1.25rem;
+    
+                    background-image: url(../../assets/icons/checkbox-default.svg);
+            }
+    
+            & span {
+                color: var(--brand-light);
+                text-decoration: underline;
+            }
+    
+            &:has(:checked) .checkbox-image {
+                    background-image: url(../../assets/icons/checkbox-checked.svg);
+            }
+        }
+    }
+
+}

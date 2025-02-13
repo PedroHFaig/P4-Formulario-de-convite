@@ -1,0 +1,32 @@
+@import url(fields/index.css);
+
+fieldset {
+    border: none;
+    display: grid;
+    gap: 1rem;
+
+    & .legend {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        margin-bottom: 1.5rem;
+
+        & img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        & legend {
+            font: var(--text-head-sm);
+            color: var(--textcolor-heading);
+        }
+    }
+}
+
+fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+.personalization > div:nth-child(3) {
+    margin-block: 1.75rem;
+}

@@ -1,0 +1,52 @@
+input, textarea, select {
+    appearance: none;
+    width: 100%;    
+         
+    padding: 1rem ;
+       
+    font: var(--text-body-md);
+    color: var(--input-placeholder);
+
+    &:hover,
+    &:focus {
+        border: 2px solid var(--brand-light);
+    }
+
+    &:invalid {
+        border: 2px solid var(--color-danger);
+    }
+
+    &[required] + .error {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-top: .5rem;
+
+        font: var(--text-body-xs);
+        color: var(--color-danger);
+    }
+
+    &:not(:focus):valid + .error {
+        display: none;
+    }
+}
+
+label {
+    font: var(--text-body-sm);
+}
+
+.input-wrapper > label, 
+.textarea-wrapper > label {
+    display: block;
+    margin-bottom: .75rem;
+}
+
+.doubleinput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.personalization > .doubleinput {
+    grid-template-columns: 1fr 2fr;
+}

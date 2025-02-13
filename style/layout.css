@@ -1,0 +1,56 @@
+#app {
+    display: grid;
+    grid-template-columns: 32.78% 67.22%;
+    
+    padding:  1.25rem;
+    gap: 1.25rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    width: 25rem;
+    height: 45.5rem;    
+    
+    margin-left: auto;
+
+    border-radius: .75rem;
+    background-image: url(../assets/bolo.svg);    
+    
+    .main-container {
+        margin: 2rem;
+
+        & img {
+            width: 2.875rem;
+            height: 3rem;
+        }
+
+        & h1 {
+            margin-block: 1rem .25rem;
+            font: var(--text-logo);
+            color: var(--color-pink);
+        }
+
+        & p {
+            color: var(--textcolor-heading);
+        }
+    }
+}
+
+aside {
+    display: grid;
+    width: 820px;
+    padding: 5rem 8.125rem  ;
+    border-radius: .75rem;
+
+    margin-right: auto;
+    overflow: auto;
+    
+    background-color: var(--shape-body);
+
+    & h1 {
+        font: var( --text-head-md);
+        color: var(--textcolor-heading);
+        margin-bottom: 2.5rem;
+    }
+}
