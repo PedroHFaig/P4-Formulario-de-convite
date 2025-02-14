@@ -31,22 +31,22 @@ input, textarea, select {
     }
 }
 
-label {
+label, h2 {
     font: var(--text-body-sm);
 }
 
-.input-wrapper > label, 
+.input-wrapper > label, h2, 
 .textarea-wrapper > label {
     display: block;
     margin-bottom: .75rem;
 }
 
-.doubleinput {
+.row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-.personalization > .doubleinput {
+.personalization > .row {
     grid-template-columns: 1fr 2fr;
 }
